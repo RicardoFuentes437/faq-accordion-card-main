@@ -1,0 +1,46 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%)), url("images/bg-pattern-desktop.svg");
+}
+html body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body main .card {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+html body main .card .text-section .accordion {
+  width: 90%;
+}
+html body main .card .text-section .accordion:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+html body main .card .text-section .accordion::after {
+  content: url("images/icon-arrow-down.svg");
+  float: right;
+}
+html body main .card .text-section .active::after {
+  content: url("images/icon-arrow-down.svg");
+  transform: rotate(0.5turn);
+}
+html body main .card .text-section .panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}/*# sourceMappingURL=style.css.map */
