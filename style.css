@@ -22,7 +22,7 @@ html body main .box-image-section {
   height: fit-content;
   position: relative;
   top: -45px;
-  left: 70px;
+  left: -410px;
   z-index: 1;
 }
 html body main .box-image-section .box-image {
@@ -32,6 +32,7 @@ html body main .box-image-section .box-image {
 html body main .card {
   display: flex;
   flex-direction: row;
+  position: absolute;
   width: 800px;
   height: 450px;
   background-color: white;
