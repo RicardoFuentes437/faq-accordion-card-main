@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 //text
 $Very-dark-desaturated-blue: hsl(238, 29%, 16%);
 $Soft-red: hsl(14, 88%, 65%);
@@ -27,21 +29,81 @@ html{
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .box-image-section{
+                width: 160px;
+                height: fit-content;
+                position: relative;
+                top: -45px;
+                left: 70px;
+                z-index: 1;
+
+                .box-image{
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+
             .card{
                 display: flex;
                 flex-direction: row;
-                width: 1000px;
-                height: 500px;
+                width: 800px;
+                height: 450px;
                 background-color: white;
                 border-radius: 20px;
                 overflow: hidden;
+                font-family: 'Kumbh Sans';
+
+                h1{
+                    font-weight: 700;
+                }
+
+                button{
+                    font-size: 12px;
+                    color: $Very-dark-desaturated-blue;
+                }
+
+                p{
+                    font-size: 12px;
+                    color: $Very-dark-grayish-blue;
+                }
+
+                .images-section{
+                    display: flex;
+                    width: 50%;
+                    align-items: center;
+                    justify-content: center;
+
+                    .desktop-image{
+                        width: 410px;
+                        position: absolute;
+                        left: -70px;
+                    }
+                }
 
                 .text-section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    text-align: left;
+                    width: 50%;
+                    padding: 55px 70px 70px 0px;
+                    
                     .accordion{
-                        width: 90%;
+                        outline: none;
+                        border: none;
+                        background-color: white;
+                        text-align: left;
+
+                        &:focus{
+                            outline: none !important;
+                            border: none;
+                        }
 
                         &:hover{
                             color: $Soft-red;
+                            outline: none !important;
+                            border: none;
                         }
 
                         &::after{
@@ -51,19 +113,23 @@ html{
                     }
 
                     .active{
+                        font-weight: 700;
+                        outline: none !important;
+                        border: none;
+
                         &::after {
                             content: url('images/icon-arrow-down.svg');
                             transform: rotate(0.5turn);
                         } 
                     }
                     
-
                     .panel {
                         padding: 0 18px;
                         background-color: white;
                         max-height: 0;
                         overflow: hidden;
                         transition: max-height 0.2s ease-out;
+                        border-bottom: 2px solid $Light-grayish-blue;
                     }
                 }
             } 
